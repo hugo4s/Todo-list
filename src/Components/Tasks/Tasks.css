@@ -1,0 +1,149 @@
+.body {
+    background: #1A1A1A;
+    height: 100vh;
+    color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 38.875rem;
+    margin-top: 5rem;
+}
+
+.criadas {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.criadas p {
+color: #4EA8DE;
+font-size: 14px;
+font-weight: 700;
+}
+
+.criadas span {
+color: #D9D9D9;
+font-size: 12px;
+border-radius: 999px;
+background: #333;
+display: flex;
+padding: 2px 8px;
+justify-content: center;
+align-items: center;
+height: 1.5rem;
+font-weight: 700;
+}
+
+.concluidas {
+display: flex;
+justify-content: space-between;
+width: 136px;
+}
+
+.concluidas p {
+    font-size: 14px;
+    color: #8284FA;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 0.5rem;
+}
+
+.concluidas span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #D9D9D9;
+    border-radius: 999px;
+    background: #333;
+    display: flex;
+    padding: 2px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 38.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.33rem;
+    margin-top: 1.56rem;
+}
+
+form div {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #262626;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.inlabel {
+    border: none;
+    padding: 0;
+}
+
+.input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background: url(./../../assets/notHover.svg) no-repeat center center;
+    width: 16px; 
+    height: 16px;
+    background-size: cover;
+}
+
+form div label {
+    color: #F2F2F2;
+    font-size: 14px;
+    font-weight: 400;
+    align-self: flex-start;
+    margin: 0;
+    position: relative;
+    transition: color 0.1s;
+}
+
+form div input[type="checkbox"]:checked {
+    background: url(./../../assets/Hover.svg);
+    width: 16px; 
+    height: 16px;
+    background-size: cover;
+}
+
+form div input[type="checkbox"]:checked + label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #808080;
+    transform: translateY(-50%);
+
+}
+
+form div input[type="checkbox"]:checked + label {
+    color: #808080;
+}
+#Trash {
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#Trash:hover {
+    transform: scale(1.1);
+}
+  
