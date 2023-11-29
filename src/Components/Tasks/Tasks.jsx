@@ -1,4 +1,4 @@
-import { Trash } from "phosphor-react";
+import { Trash, Article } from "phosphor-react";
 import './Tasks.css'
 
 function Tasks(props) {
@@ -14,6 +14,7 @@ function Tasks(props) {
                     <span>{props.getCompletedTasksCount()} de {props.tasks.length}</span>
                 </div>
             </div>
+            {props.tasks.length > 0 ? (
             <form>
                 {props.tasks.map((task, index) => (
                     <div key={index}>
@@ -24,7 +25,15 @@ function Tasks(props) {
                         <Trash id="Trash" size={16} onClick={() => props.deleteTask(index)} />
                     </div>
                 ))}
-                </form>
+                </form>) : (
+                <div className="Manuel">
+                    <Article id="Article" size={56} />
+                    <div className="Samuel">
+                        <strong>Você ainda não tem tarefas cadastradas</strong>
+                        <p >Crie tarefas e organize seus itens a fazer</p>
+                    </div>
+                </div>)
+                }
         </div>
     )
 }
